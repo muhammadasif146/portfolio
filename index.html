@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Motion & Design</title>
+    <meta name="description" content="Premium Motion Design Portfolio" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <!-- Import Map for Three.js -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Muhammad Asif</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#experience" class="nav-item">Experience</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="ph ph-list"></i>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div id="canvas-container"></div>
+            <div class="hero-content">
+                <h1 class="hero-title"><span class="accent-text">Muhammad Asif</span></h1>
+                <p class="hero-subtitle">Expert Flutter Developer for iOS & Android</p>
+                <p class="hero-description">Building scalable, high-performance apps with clean architecture and modern
+                    UI.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am Muhammad Asif, a results-driven Mobile App Specialist with over 4 years of experience
+                            developing diverse applications across multiple industries. I specialize in Flutter and
+                            Dart, utilizing Clean Architecture to ensure every project is scalable, maintainable, and
+                            built to solve real-world problems.</p>
+                        <p>My technical journey is centered on crafting fluid solutions that feel truly native. Whether
+                            working on complex enterprise solutions or consumer-facing apps, I focus on performance
+                            optimization and robust architectures to deliver excellence in diverse mobile environments.
+                        </p>
+                        <div class="skills-wrapper">
+                            <h3>At the Toolkit</h3>
+                            <div class="skills-grid">
+                                <!-- Mobile Development -->
+                                <div class="skill-card glass-panel">
+                                    <i class="ph ph-device-mobile skill-icon"></i>
+                                    <div class="skill-info">
+                                        <h4>Mobile Development</h4>
+                                        <p>Flutter, Dart, JavaKotlin,</p>
+                                    </div>
+                                </div>
+                                <!-- Architecture -->
+                                <div class="skill-card glass-panel">
+                                    <i class="ph ph-buildings skill-icon"></i>
+                                    <div class="skill-info">
+                                        <h4>Architecture</h4>
+                                        <p>Clean Arch, MVC MVVM, SOLID</p>
+                                    </div>
+                                </div>
+                                <!-- State Management -->
+                                <div class="skill-card glass-panel">
+                                    <i class="ph ph-tree-structure skill-icon"></i>
+                                    <div class="skill-info">
+                                        <h4>State Management</h4>
+                                        <p>BLoC, Provider, GetX</p>
+                                    </div>
+                                </div>
+                                <!-- Tools & Cloud -->
+                                <div class="skill-card glass-panel">
+                                    <i class="ph ph-cloud skill-icon"></i>
+                                    <div class="skill-info">
+                                        <h4>Tools & Cloud</h4>
+                                        <p>Firebase, Git, CI/CD, Maps</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="glass-card profile-card">
+                            <img src="./assets/profile.jpg" alt="Profile Picture" class="profile-image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Selected Work</span>
+                    <h2 class="section-title">Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn">View Case</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Neon Cyberpunk UI</h3>
+                            <p>Interactive dashboard with WebGL effects</p>
+                        </div>
+                    </article>
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn">View Case</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Abstract Motion Gallery</h3>
+                            <p>3D generative art exhibition website</p>
+                        </div>
+                    </article>
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn">View Case</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>EcoCommerce</h3>
+                            <p>Sustainable shopping platform with smooth page transitions</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">My Journey</span>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-content glass-panel">
+                            <h3>Senior Creative Developer</h3>
+                            <h4>Digital Agency X</h4>
+                            <p>Leading the interactive web team, building award-winning sites for global brands using
+                                WebGL and REACT.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-content glass-panel">
+                            <h3>Frontend Developer</h3>
+                            <h4>Tech Startup Y</h4>
+                            <p>Developed the core product dashboard and marketing website, focusing on performance and
+                                accessibility.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-content glass-panel">
+                            <h3>UI/UX Designer</h3>
+                            <h4>Freelance</h4>
+                            <p>Designed user interfaces for mobile apps and websites, collaborating with clients to
+                                refine their brand identity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper glass-panel">
+                    <div class="contact-header">
+                        <h2 class="section-title">Let's Talk</h2>
+                        <p>Have a project in mind? Send me a message.</p>
+                    </div>
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" " />
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" " />
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-icon"><i class="ph ph-dribbble-logo"></i></a>
+                        <a href="#" class="social-icon"><i class="ph ph-behance-logo"></i></a>
+                        <a href="#" class="social-icon"><i class="ph ph-github-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <!-- Main Script -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
