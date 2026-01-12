@@ -407,15 +407,27 @@ h4 {
 
 /* Projects Section */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 40px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.projects-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .project-card {
     cursor: pointer;
     perspective: 1000px;
-    /* Enable 3D space */
+    flex: 0 0 350px;
+    min-width: 350px;
+    scroll-snap-align: start;
 }
 
 .project-image {
@@ -478,6 +490,102 @@ h4 {
 
 .project-info p {
     color: #888;
+}
+
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    /* Balanced spacing */
+    flex-wrap: wrap;
+}
+
+.btn-sm {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    /* Very subtle background */
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sm:hover {
+    background: var(--accent-color);
+    /* Solid accent on hover */
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* Projects Container & Scroll Buttons */
+.projects-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+    opacity: 0;
+    /* Initially hidden, JS will handle visibility */
+    pointer-events: none;
+}
+
+.scroll-btn.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.scroll-btn:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-left {
+    left: -20px;
+}
+
+.scroll-right {
+    right: -20px;
+}
+
+@media (max-width: 768px) {
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .scroll-left {
+        left: 10px;
+    }
+
+    .scroll-right {
+        right: 10px;
+    }
 }
 
 /* Experience Section */
@@ -661,4 +769,29 @@ footer {
     .timeline-item::after {
         left: -24px;
     }
+}
+
+/* Scroll Dots Animation */
+.scroll-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-secondary);
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.dot.active {
+    opacity: 1;
+    transform: scale(1.5);
+    background-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
 }
